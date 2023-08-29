@@ -23,7 +23,7 @@ function RepositoriesSearched({repositories, handleAddRepository}) {
     }
 
     return (
-        <div className="flow-root bg-gray-700">
+        <div className="flow-root bg-gray-700 overflow-x-auto overflow-y-auto min-h-[200px] max-h-[200px]">
             <ul role="list">
                 {repositories.map((item) => crateRepositoryItem(item))}
             </ul>

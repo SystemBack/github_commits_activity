@@ -6,7 +6,7 @@ const octokit = new Octokit({
 
 const fetchRepositories = async (search: string) => {
     try {
-        const searchQuery = '?per_page=5&q=' + encodeURIComponent(search)
+        const searchQuery = '?q=' + encodeURIComponent(search)
         const response = await octokit.request(`GET /search/repositories${searchQuery}`, {
             headers: {
                 'X-GitHub-Api-Version': import.meta.env.VITE_API_VERSION
