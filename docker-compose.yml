@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: github_charts
+    build: .
+    ports:
+      - "80:3000"
+    volumes:
+      - "./:/app"
+    tty: true
